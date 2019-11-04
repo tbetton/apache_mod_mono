@@ -15,7 +15,7 @@ RUN apt-get update \
             s!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g; \
             ' /etc/apache2/apache2.conf
 
-COPY /config/apache2-site.conf /etc/apache2/sites-available/000-default.conf
+COPY /conf/apache2-site.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www
 EXPOSE 80
